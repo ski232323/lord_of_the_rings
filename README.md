@@ -1,4 +1,4 @@
-# Lord of the Rings II
+# Lord of the Rings 
 
 Bienvenue dans le projet **Lord of the Rings**. Ce projet est une simulation de combat entre des personnages emblématiques de l'univers de Tolkien.
 
