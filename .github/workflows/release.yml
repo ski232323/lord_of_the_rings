@@ -1,0 +1,26 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Cette règle va écouter tous les tags qui commencent par "v", par exemple v1.0.0, v1.1.0, etc.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./path/to/your/files/*  # Optionnel : tu peux spécifier des fichiers à inclure dans la release (comme des binaires ou des archives)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Utilise le token GitHub pour authentifier l'action
