@@ -1,5 +1,4 @@
- 
- from time import sleep
+from time import sleep
  # Création des personnages
 Legolas = Elf('Legolas')
 Sauron = Troll('Sauron')
